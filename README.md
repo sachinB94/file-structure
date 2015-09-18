@@ -7,13 +7,13 @@
 ```javascript
   APP_ROOT/
     src/
-      components/
+      components/  // A component can access other component through its controller only (not through model)
         users/
           controller.js
           model.js
           routes.js
       associations.js  // All associations/realtions between models
-      middlewares.js  // All middlewares like for sending reponse, encrypting password, etc.(must access any component)
+      middlewares.js  // All middlewares like for sending reponse, encrypting password, etc.(must not access any component)
       validators.js  // Clean and validate all incoming data
       util.js  // Utility functions
     config/
